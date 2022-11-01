@@ -15,8 +15,16 @@ const Main = () => {
     });
   }, []);
 
-  const movie = movies[Math.floor(Math.random() * movies.length)];
+  const [movie, setMovie] = useState([]);
 
+  useEffect(() => {
+    const movie = movies[Math.floor(Math.random() * movies.length)];
+    setMovie(movie);
+  
+    console.log(movie);
+  }, [movies]);
+
+  
   const imgPath = movie?.backdrop_path;
 
   const [trailer, setTrailer] = useState(false);
