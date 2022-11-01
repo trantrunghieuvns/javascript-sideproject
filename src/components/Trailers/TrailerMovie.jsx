@@ -24,7 +24,7 @@ const TrailerMovie = ({ movieTitle, movie }) => {
   }
   useEffect(() => {
     handleSearch();
-    console.log(videoURL);
+
   }, [videoURL]);
 
   return (
