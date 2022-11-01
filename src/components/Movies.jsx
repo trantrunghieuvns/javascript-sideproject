@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { truncateString } from "../constants/truncateString";
+import { truncateString } from "./actions/truncateString";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { UserAuth } from "../context/AuthContext";
 import { db } from "../firebase";
@@ -23,6 +23,8 @@ const Movies = ({ item }) => {
           id: item.id,
           title: item.title,
           img: item.backdrop_path,
+          release_date: item.release_date,
+          overview: item.overview,
         }),
       });
     } else {
@@ -49,6 +51,7 @@ const Movies = ({ item }) => {
         <div className="transition hover:opacity-90 duration-150 absolute top-0 left-0 w-full h-full hover:bg-black/80 opacity-0 text-white">
           <p
             onClick={() => {
+              console.log(item);
               MovieTitle(item);
             }}
             className="white-space-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center "
@@ -62,6 +65,7 @@ const Movies = ({ item }) => {
         </div>
       </div>
 
+      {/* trailer part */}
       {trailer ? (
         <div
           onClick={() => setTrailer(false)}

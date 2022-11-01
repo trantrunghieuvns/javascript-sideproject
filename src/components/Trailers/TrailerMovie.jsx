@@ -1,5 +1,6 @@
 import React from "react";
 import ReactPlayer from "react-player/lazy";
+import { truncateString } from "../actions/truncateString";
 import { useState } from "react";
 import movieTrailer from "movie-trailer";
 import { useEffect } from "react";
@@ -7,14 +8,6 @@ import { useEffect } from "react";
 const TrailerMovie = ({ movieTitle, movie }) => {
   const [video, setVideo] = useState("inception");
   const [videoURL, setVideoURL] = useState("");
-
-  const truncateString = (str, num) => {
-    if (str?.length > num) {
-      return str.slice(0, num) + "...";
-    } else {
-      return str;
-    }
-  };
 
   function handleSearch() {
     setVideo(movieTitle);
@@ -24,7 +17,6 @@ const TrailerMovie = ({ movieTitle, movie }) => {
   }
   useEffect(() => {
     handleSearch();
-
   }, [videoURL]);
 
   return (

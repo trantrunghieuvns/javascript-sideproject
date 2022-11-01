@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import requests from "../Request";
 import TrailerMovie from "./Trailers/TrailerMovie";
-import { truncateString } from "../constants/truncateString";
+import { truncateString } from "./actions/truncateString";
 import { AiOutlineClose } from "react-icons/ai";
 const Main = () => {
   const [movies, setMovies] = useState([]);
@@ -20,11 +20,10 @@ const Main = () => {
   useEffect(() => {
     const movie = movies[Math.floor(Math.random() * movies.length)];
     setMovie(movie);
-  
+
     console.log(movie);
   }, [movies]);
 
-  
   const imgPath = movie?.backdrop_path;
 
   const [trailer, setTrailer] = useState(false);
@@ -78,7 +77,6 @@ const Main = () => {
         >
           <div className="flex player items-center justify-center h-screen w-screen">
             <TrailerMovie movieTitle={movieTitle} movie={movie} />
-
             <AiOutlineClose
               id={movie.title}
               className="fixed mx-[8em] -my-[11em] md:mx-[23em] md:-my-[9em]  lg:mx-[33em] lg:-my-[18em] xl:mx-[33em] xl:-my-[18em] cursor-pointer"
