@@ -4,7 +4,8 @@
 module.exports = {
   
   content: ["./src/**/*.{js,jsx,ts,tsx}",
- ],
+ ], 
+
   theme: {screens:
     {
       'su': '300px',
@@ -27,6 +28,9 @@ module.exports = {
     ,extend: {},
   },
   plugins: [require('tailwind-scrollbar-hide')],
+
+
+  
 
   variants: {
     accessibility: ['responsive', 'focus-within', 'focus'],
