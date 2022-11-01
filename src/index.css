@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;400&display=swap');
+
+body {
+  background-color: #000000;
+  font-family:'Roboto','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
