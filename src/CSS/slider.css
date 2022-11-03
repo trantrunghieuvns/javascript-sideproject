@@ -21,9 +21,11 @@
 }
 
 .slick-slide .desc-main img {
-    min-height: 560px;
+    height: 100%;
     z-index: 0;
-    min-width: auto;
+    width: 100%;
+    
+    object-fit: cover;
 }
 
 .slick-slider .slick-track .slick-slide .desc-main .description {

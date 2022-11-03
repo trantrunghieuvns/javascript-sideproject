@@ -55,13 +55,14 @@ const Main = () => {
       <div className="w-full h-[560px] text-white mb-6">
         <Slider {...settings}>
           {movies.map((movie) => (
-            <div className="desc-main w-full h-full">
+            <div className="desc-main w-full h-[560px]">
               <div className="blackBg "></div>
+              {console.log(movie)}
               <img
                 src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
-                alt="movie?.title"
+           alt={`watch ${movie.title} online`}
               />
-              <div className="description absolute w-full top-[20%] p-4 md:p-8 md:-mt-7 sm:mt-12">
+              <div className="description absolute w-full top-[20%] p-4 md:p-8 md:-mt-7 sm:mt-5 su:w-[30%] md:w-[90%] md:max-w-[80%] lg:max-w-[85%]">
                 <h1 className="font-black py-5 ml-0 text-5xl">
                   {movie?.title}
                 </h1>
@@ -82,7 +83,7 @@ const Main = () => {
                   Release: {movie?.release_date}
                 </p>
 
-                <p className="text-gray-300 text-sm sm:mt-5 w-full md:max-w-[80%] lg:max-w-[85%] ">
+                <p className="text-gray-300 text-sm sm:mt-5 su:w-[60%] md:w-[90%] md:max-w-[80%] lg:max-w-[85%] ">
                   Overview: {truncateString(movie?.overview, 150)}
                 </p>
               </div>
