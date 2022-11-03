@@ -9,6 +9,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import "../CSS/slider.css";
 
 const Main = () => {
   //react-Slick
@@ -18,6 +19,7 @@ const Main = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    centerPadding: "100px",
   };
   //end of react-Slick
 
@@ -50,18 +52,16 @@ const Main = () => {
 
   return (
     <>
-      <div className="w-full h-[550px] text-white mb-6">
+      <div className="w-full h-[560px] text-white mb-6">
         <Slider {...settings}>
           {movies.map((movie) => (
-            <div className="w-full h-full">
-              <div className="absolute w-full h-[550px] bg-gradient-to-r from-black"></div>
-           
+            <div className="desc-main w-full h-full">
+              <div className="blackBg "></div>
               <img
-                className="w-full h-full object-cover"
                 src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
                 alt="movie?.title"
               />
-              <div className="absolute w-full top-[20%] p-4 md:p-8">
+              <div className="description absolute w-full top-[20%] p-4 md:p-8 md:-mt-7 sm:mt-12">
                 <h1 className="font-black py-5 ml-0 text-5xl">
                   {movie?.title}
                 </h1>
@@ -82,7 +82,7 @@ const Main = () => {
                   Release: {movie?.release_date}
                 </p>
 
-                <p className="text-gray-300 text-sm mt-4 w-full md:max-w-[60%] lg:max-w-[35%] ">
+                <p className="text-gray-300 text-sm sm:mt-5 w-full md:max-w-[80%] lg:max-w-[85%] ">
                   Overview: {truncateString(movie?.overview, 150)}
                 </p>
               </div>

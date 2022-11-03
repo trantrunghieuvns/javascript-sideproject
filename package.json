@@ -20,7 +20,10 @@
     "react-slick": "^0.29.0",
     "redux": "4.2.0",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.6",
     "tailwind-scrollbar-hide": "^1.1.7",
+    "tailwind.macro": "^0.5.10",
+    "tw-tailwind": "^1.0.21",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -1,0 +1,44 @@
+.slick-slider {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.slick-list {
+    position: relative;
+
+
+
+    width: 100%;
+    height: 560px;
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.slick-slide .desc-main img {
+    min-height: 560px;
+    z-index: 0;
+    min-width: auto;
+}
+
+.slick-slider .slick-track .slick-slide .desc-main .description {
+    z-index: 50;
+    position: flex;
+    color: #D1D5DB; 
+    font-size: 0.875rem;
+    min-width: 460px; 
+    max-width: 628px;
+}
+
+.slick-slider .slick-track .slick-slide .desc-main .blackBg {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5298494397759104) 60%, rgba(92,92,92,0.28335084033613445) 81%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    min-width:1903px;
+    min-height: 560px;
+}

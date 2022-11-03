@@ -6,7 +6,6 @@ import { db } from "../firebase";
 import { updateDoc, onSnapshot } from "firebase/firestore";
 import { doc, setDoc } from "firebase/firestore";
 import { AiOutlineClose } from "react-icons/ai";
-import { isValidTimestamp } from "@firebase/util";
 import TrailerMovie from "./Trailers/TrailerMovie";
 
 const SavedShows = (item) => {
