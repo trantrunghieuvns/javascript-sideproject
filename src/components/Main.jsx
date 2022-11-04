@@ -25,7 +25,7 @@ const Main = () => {
     cssEase: "linear",
     lazyLoad: true,
     pauseOnHover: true,
-    fade: true,
+  
   };
   //end of react-Slick css
 
