@@ -16,14 +16,14 @@ const Main = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 900,
+    speed: 1100,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     centerPadding: "100px",
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1800,
     cssEase: "linear",
-    
+    fade: true,
     pauseOnHover: true,
   
   };
