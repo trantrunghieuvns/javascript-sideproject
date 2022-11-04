@@ -23,7 +23,7 @@ const Main = () => {
     centerPadding: "100px",
     autoplaySpeed: 2000,
     cssEase: "linear",
-    lazyLoad: true,
+    
     pauseOnHover: true,
   
   };
