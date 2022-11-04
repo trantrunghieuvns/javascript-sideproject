@@ -8,7 +8,7 @@ import { useEffect } from "react";
 const TrailerMovie = ({ movieTitle, movie }) => {
   const [video, setVideo] = useState("inception");
   const [videoURL, setVideoURL] = useState("");
-
+console.log(movieTitle);
   function handleSearch() {
     setVideo(movieTitle);
     movieTrailer(video).then((res) => {
@@ -17,7 +17,13 @@ const TrailerMovie = ({ movieTitle, movie }) => {
   }
   useEffect(() => {
     handleSearch();
+    console.log(videoURL)
   }, [videoURL]);
+
+  // const theMovieTitle = () => {
+  //   { movieTitle ? movie.title : movie.name}
+
+  // }
 
   return (
     <div className="flex">

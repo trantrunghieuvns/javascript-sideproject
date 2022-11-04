@@ -24,32 +24,32 @@
     height: 100%;
     z-index: 0;
     width: 100%;
-    
     object-fit: cover;
+    object-position: 0 10%;
 }
 
 .slick-slider .slick-track .slick-slide .desc-main .description {
     z-index: 50;
     position: flex;
-    color: #D1D5DB; 
+    color: #D1D5DB;
     font-size: 0.875rem;
-    min-width: 460px; 
+    min-width: 460px;
     max-width: 628px;
 }
 
 .slick-slider .slick-track .slick-slide .desc-main .blackBg {
     background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5298494397759104) 60%, rgba(92,92,92,0.28335084033613445) 81%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5298494397759104) 60%, rgba(92, 92, 92, 0.28335084033613445) 81%, rgba(255, 255, 255, 0) 100%);
     position: absolute;
-    min-width:1903px;
+    min-width: 1903px;
     min-height: 560px;
 }
 
 .slick-slider .slick-dots {
-    width:100%;
-align-items: center;
-justify-content: center;
-justify-items: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
     position: absolute;
     bottom: 30px;
     display: block;
@@ -82,19 +82,29 @@ justify-items: center;
     color: rgb(229, 51, 51);
 }
 
+.div {
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* //mobile */
 @media only screen and (max-width: 500px) {
 
     .slick-slider .slick-track .slick-slide .desc-main .blackBg {
-        
-        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5298494397759104) 20%, rgba(92,92,92,0.28335084033613445) 41%);
-        
-        max-width:500px ;
+
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5298494397759104) 20%, rgba(92, 92, 92, 0.28335084033613445) 41%);
+
+        max-width: 500px;
         min-height: 560px;
     }
 
     .slick-slider .slick-dots {
         bottom: 1rem;
-        
+
     }
 
     .slick-dots li {
@@ -110,16 +120,16 @@ justify-items: center;
     .slick-dots li button:before {
         font-family: 'slick';
         font-size: 1px;
-   
-    }
-  }
 
-  @media only screen and (max-width: 800px) {
+    }
+}
+
+@media only screen and (max-width: 800px) {
 
     .slick-slider .slick-track .slick-slide .desc-main .blackBg {
-        
-        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5298494397759104) 20%, rgba(92,92,92,0.28335084033613445) 41%);
-        max-width:800px ;
+
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5298494397759104) 20%, rgba(92, 92, 92, 0.28335084033613445) 41%);
+        max-width: 800px;
         min-height: 560px;
     }
 

@@ -12,16 +12,22 @@ import Slider from "react-slick";
 import "../CSS/slider.css";
 
 const Main = () => {
-  //react-Slick
-  var settings = {
+  //react-Slick setting
+  const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 900,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
     centerPadding: "100px",
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    lazyLoad: true,
+    pauseOnHover: true,
+    fade: true,
   };
-  //end of react-Slick
+  //end of react-Slick css
 
   const [movies, setMovies] = useState([]);
 
@@ -36,8 +42,6 @@ const Main = () => {
   useEffect(() => {
     const movie = movies[Math.floor(Math.random() * movies.length)];
     setMovie(movie);
-
-    console.log(movie);
   }, [movies]);
 
   // const imgPath = movie?.backdrop_path;
@@ -46,25 +50,24 @@ const Main = () => {
   const [movieTitle, setMovieTitle] = useState();
 
   const MovieTitle = (movie) => {
-    setMovieTitle(movie.title);
+    setMovieTitle(movie.title ? movie.title : movie.name);
     setTrailer(true);
   };
 
   return (
     <>
-      <div className="w-full h-[560px] text-white mb-6">
+      <div className="slider_main w-full h-[560px] text-white mb-6">
         <Slider {...settings}>
           {movies.map((movie) => (
             <div className="desc-main w-full h-[560px]">
               <div className="blackBg "></div>
-              {console.log(movie)}
               <img
                 src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
-           alt={`watch ${movie.title} online`}
+                alt={`watch ${movie.title} online`}
               />
               <div className="description absolute w-full top-[20%] p-4 md:p-8 md:-mt-7 sm:mt-5 su:w-[30%] md:w-[90%] md:max-w-[80%] lg:max-w-[85%]">
-                <h1 className="font-black py-5 ml-0 text-5xl">
-                  {movie?.title}
+                <h1 className="font-black py-5 ml-0 md:text-5xl su:text-3xl sm:text-4xl">
+                  {movie?.title ? movie.title : movie.name}
                 </h1>
                 <div>
                   <button
