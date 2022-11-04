@@ -6,9 +6,6 @@
 
 .slick-list {
     position: relative;
-
-
-
     width: 100%;
     height: 560px;
 }
@@ -125,9 +122,7 @@
 }
 
 @media only screen and (max-width: 800px) {
-
     .slick-slider .slick-track .slick-slide .desc-main .blackBg {
-
         background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5298494397759104) 20%, rgba(92, 92, 92, 0.28335084033613445) 41%);
         max-width: 800px;
         min-height: 560px;
