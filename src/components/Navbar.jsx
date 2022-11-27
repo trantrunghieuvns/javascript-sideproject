@@ -31,21 +31,22 @@ const Navbar = ({ movies, searchResults, setSearchResults }) => {
 	};
 
 	return (
-		<div className='flex justify-between p-4 z-[50] w-full absolute'>
+		<div className='flex justify-between p-4 z-50 w-full absolute'>
 			<Link to='/'>
 				<h1 className='text-red-600 text-2xl font-bold cursor-pointer ml-[1rem]'>
 					NETFLIX
 				</h1>
 			</Link>
 
-			{user?.email ? ( // 2 situations
+			{user?.email ? (
 				<div>
 					<div className='my-10 absolute md:my-0 md:-mt-3 md:-m-[30%] lg:-mx-[20%] opacity-70 hover:opacity-80 transition-all transition-duration: 350ms'>
 						<div className='search-bar'>
 							<form onSubmit={handleSubmit}>
 								<input
 									ref={inputRef}
-									className='placeholder:px-3 bg-slate-700 py-1 mt-4 rounded cursor-pointer text-white w-[100%] -mr-1 md:-mr-8 '
+									className='placeholder:px-4
+									bg-slate-700 py-1 mt-4 rounded cursor-pointer text-white w-[100%] -mr-1 md:-mr-8 px-2'
 									type='text'
 									placeholder={`Search...`}
 									onChange={handleSearchChange}

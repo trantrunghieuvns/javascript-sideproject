@@ -26,7 +26,6 @@ const Main = () => {
 		fade: true,
 		pauseOnHover: true,
 	};
-	//end of react-Slick css
 
 	const [movies, setMovies] = useState([]);
 
@@ -55,7 +54,7 @@ const Main = () => {
 
 	return (
 		<>
-			<div className='slider_main z-0   w-full h-[560px] text-white mb-6'>
+			<div className='slider_main z-0 w-full h-[560px] text-white mb-6'>
 				<Slider {...settings}>
 					{movies.map((movie) => (
 						<div className='desc-main w-full h-[560px]'>
@@ -64,7 +63,7 @@ const Main = () => {
 								src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
 								alt={`watch ${movie.title} online`}
 							/>
-							<div className='description absolute w-full top-[20%] p-4 md:p-8 md:-mt-7 sm:mt-5 su:w-[30%] md:w-[90%] md:max-w-[80%] lg:max-w-[85%]'>
+							<div className='description absolute w-full top-[20%] p-4 md:p-8 md:-mt-7 sm:mt-5 su:w-[60%]'>
 								<h1 className='font-black py-5 ml-0 md:text-5xl su:text-3xl sm:text-4xl'>
 									{movie?.title ? movie.title : movie.name}
 								</h1>
